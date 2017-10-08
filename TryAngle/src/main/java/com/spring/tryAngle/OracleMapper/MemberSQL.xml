@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.spring.tryAngle.DAO.MemberDAO">
+    	<resultMap type="com.spring.tryAngle.DTO.MemberDTO" id="MemberDTO">
+    		<result property="id" column="MID"/>
+    		<result property="pw" column="MPW"/>
+    		<result property="name" column="MNAME"/>
+    		<result property="tel" column="MTEL"/>
+    		<result property="telc" column="MTEL_CHK"/>
+    	</resultMap>
+    	
+    	<!-- 아이디 중복검사 -->
+    	<select id="JoinConfirm" resultMap="MemberDTO">
+    		SELECT MId 
+    		FROM TRY_MEMBER 
+    		WHERE MId=#{param1}
+    	</select>
+    	
+    	<!-- Member Insert  (joinPage) -->
+    	<insert id="JoinInsert">
+			INSERT INTO 
+			TRY_MEMBER  (mId,mPw,mName,mTel,mTel_chk)
+			VALUES(#{param1},#{param2},#{param3},#{param4},#{param5})
+    	</insert>
+    	
+    	<!-- Login -->
+    	<!-- MyPage 로그인 -->
+    	<select id="LoginOk" resultMap="MemberDTO">
+    		SELECT MID,MNAME,MTEL
+    		FROM TRY_MEMBER    	
+    		WHERE MID=#{param1} AND MPW=#{param2}
+    	</select>
+    	
+    	<!-- select MyInfo  (MyPage) -->
+    	<select id="selectMyInfo" resultMap="MemberDTO">
+    		SELECT * 
+    		FROM TRY_MEMBER 
+    		WHERE MID=#{param1} 
+ 		</select>
+ 		
+ 		<!-- sarchPawssword -->
+ 		<select id="selectPw" resultMap="MemberDTO">
+ 			SELECT MPW 
+ 			FROM TRY_MEMBER 
+ 			WHERE MID=#{param1}
+ 		</select>
+ 		
+ 		<!-- Modify MyInfo (MyPage) -->
+ 		<update id="MemberUpdate">
+ 			UPDATE TRY_MEMBER 
+ 			SET
+ 				MNAME=#{param1} ,
+ 				MPW=#{param2} ,
+ 				MTEL=#{param3},
+ 				MTEL_CHK=#{param4}
+ 			WHERE
+ 				MID=#{param5}
+ 		</update>
+ 		
+ 		<!-- Find Page // find ID -->
+ 		<select id="findID" resultMap="MemberDTO">
+ 			SELECT MID 
+ 			FROM TRY_MEMBER
+ 			WHERE MNAME=#{param1} AND MTEL=#{param2} 				  		
+ 		</select>
+ 		
+ 		<!-- Find Page // find Pw -->
+ 		<select id="findPw" resultMap="MemberDTO">
+ 			SELECT MPW
+ 			FROM TRY_MEMBER
+ 			WHERE MID=#{param1} AND MNAME=#{param2} AND MTEL=#{param3} 				  		
+ 		</select>
+ 		
+ 		<!-- 임시비밀번호  -->
+ 		<update id="reversePw">
+ 			UPDATE TRY_MEMBER
+ 			SET 
+ 				MPW=#{param1}
+ 			WHERE MID=#{param2} 		
+ 		</update>
+ 		
+ 		
+ 		<!-- 카카오 로그인  -->
+ 		<!-- 카카오 로그인  -->
+ 		<!-- 카카오 로그인  -->
+ 		
+ 		<!-- 아이디 중복검사 -->
+ 		<select id="KaKaoSearchId" resultMap="MemberDTO">
+ 			SELECT MID
+ 			FROM TRY_KAKAO
+ 			WHERE MID=#{param1}
+ 		</select>
+ 		<!-- 아이디 등록 -->
+ 		<insert id="KakaoInsertDB">
+ 			INSERT INTO
+ 			TRY_KAKAO (MID,MNAME,MTEL,MTEL_CHK)
+ 			VALUES (
+ 				#{param1},#{param2},#{param3},'O'
+ 			)
+ 		</insert>
+ 		
+ 		
+ 		
+ 		<!-- 네이버 로그인  -->
+ 		<!-- 네이버 로그인  -->
+ 		<!-- 네이버 로그인  -->
+ 		
+ 		<!-- 아이디 중복검사 -->
+ 		<select id="NaverSearchId" resultMap="MemberDTO">
+ 			SELECT MID
+ 			FROM TRY_NAVER
+ 			WHERE MID=#{param1}
+ 		</select>
+ 		
+ 		<!-- 아이디 등록 -->
+ 		<insert id="NaverInsertDB">
+ 			INSERT INTO
+ 			TRY_NAVER (MID,MNAME,MTEL,MTEL_CHK)
+ 			VALUES (
+ 				#{param1},#{param2},#{param3},'O'
+ 			)
+ 		</insert>
+    </mapper>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.spring.tryAngle.DAO.ContactDAO">
+    	<resultMap type="com.spring.tryAngle.DTO.ContactDTO" id="ContactDTO">
+    		<result property="id" column="cid"/>
+    		<result property="name" column="cName"/>
+    		<result property="tel" column="cTel"/>
+    		<result property="title" column="cTitle"/>
+    		<result property="context" column="cContext"/>  
+    		<result property="date" column="cDate"/>    	  
+    		<result property="no" column="cNO"/>    		  
+    		<result property="type" column="cType"/>    	
+    	</resultMap>
+    	
+    	
+    	<insert id="contactInsert">
+    		INSERT INTO TRY_CONTACT 
+    			(CID, CNAME, CTEL, CTITLE,CCONTEXT,CDATE,CNO,CTYPE)
+    		VALUES (
+    			#{param1}, #{param2}, #{param3},
+    			#{param4}, #{param5}, #{param6},SEQ_TRYCONTACT.NEXTVAL,#{param7}
+    		)
+    	</insert>
+    	
+    	<select id="myPageContactSelect" resultMap="ContactDTO">
+    		SELECT * 
+    		FROM TRY_CONTACT 
+    		WHERE cID=#{param1} AND CTYPE=#{param2}
+    	</select>
+    	
+    	<select id="myPageContactDetail" resultMap="ContactDTO">
+    		SELECT *
+    		FROM TRY_CONTACT
+    		WHERE CID=#{param1} AND CNO=#{param2}    	
+    	</select>
+    </mapper>

@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	.section-Box{
+		height:100% !important;
+	}
+	#section1-container{
+		overflow:hidden;
+		height:2400px;
+	}
+	.section1_sub{
+		height:1300px !important;
+	}
+	.select_itemm{
+		border-bottom: 2px solid #ff4800;
+		border-top: 2px solid #ff4800;
+		display:inline-block;
+		padding:2% 5%;
+		margin:0px 5%;
+		margin-top:90px;
+		color:#000;
+	}
+	.select_itemm:nth-child(1){
+		margin-left:15%;
+	}
+	
+	.portfolio-container{
+		width:100%;
+		height:100%;
+		margin-top:60px;
+	}
+	.portfolio-item{
+		margin:2%;
+		width:45%;
+		float:left;
+		height:150px;
+		transition: all 0.5s;
+		position:relative;
+		overflow:hidden;
+		background-size:cover !important;
+	}
+	.portfolio-item:nth-child(1){background:url(../../01_img/00_Common/00_pofol_11.gif) center center no-repeat;}
+	.portfolio-item:nth-child(2){background:url(../../01_img/00_Common/00_pofol_10.gif) center center no-repeat;}
+	.portfolio-item:nth-child(3){background:url(../../01_img/00_Common/00_pofol_13.gif) center center no-repeat;}
+	.portfolio-item:nth-child(4){background:url(../../01_img/00_Common/00_pofol_02.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(5){background:url(../../01_img/00_Common/00_pofol_12.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(6){background:url(../../01_img/00_Common/00_pofol_03.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(7){background:url(../../01_img/00_Common/00_pofol_19.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(8){background:url(../../01_img/00_Common/00_pofol_08.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(9){background:url(../../01_img/00_Common/00_pofol_20.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(10){background:url(../../01_img/00_Common/00_pofol_07.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(11){background:url(../../01_img/00_Common/00_pofol_21.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(12){background:url(../../01_img/00_Common/00_pofol_15.gif) center center no-repeat;}
+	.portfolio-item:nth-child(13){background:url(../../01_img/00_Common/00_pofol_22.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(14){background:url(../../01_img/00_Common/00_pofol_09.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(15){background:url(../../01_img/00_Common/00_pofol_23.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(16){background:url(../../01_img/00_Common/00_pofol_01.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(17){background:url(../../01_img/00_Common/00_pofol_27.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(18){background:url(../../01_img/00_Common/00_pofol_18.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(19){background:url(../../01_img/00_Common/00_pofol_24.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(20){background:url(../../01_img/00_Common/00_pofol_04.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(21){background:url(../../01_img/00_Common/00_pofol_25.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(22){background:url(../../01_img/00_Common/00_pofol_16.gif) center center no-repeat;}
+	.portfolio-item:nth-child(23){background:url(../../01_img/00_Common/00_pofol_26.jpg) center center no-repeat;}
+	.portfolio-item:nth-child(24){background:url(../../01_img/00_Common/00_pofol_17.jpg) center center no-repeat;}
+	
+	.port-active{
+		width:0% !important;
+		height:0% !important;
+		margin:0 !important;
+	}
+	.port-active2{
+		transform:scale(1.05,1.05);
+	}
+	.port_fillter{
+		position:absolute;
+		left:100%;
+		top:0;
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,0.7);
+	}
+	.port_text1,.port_text2,.port_text3{
+		text-align:center;
+	}
+	.port_text1{
+		font-family:'Hanna', serif;
+		padding:20px 0px;
+	}
+	.port_text2{
+		font-family:"돋움";
+		padding:0 20px;
+		margin-bottom:5px;
+		font-size:14px;
+	}
+	.port_text3{
+		padding-right:20px;
+		text-align: right;
+		font-size:12px;
+	}
+}
+@media all and (min-width: 835px){
+	
+	#section1-container{
+		height:2000px;
+	}
+	.select_itemm:nth-child(1){
+		margin-left:20%;
+	}
+	
+	.portfolio-item{
+		margin:0.8%;
+		width:31%;
+		float:left;
+		height:190px;
+		background:#9F6;
+		transition: all 0.5s;
+	}
+	.section1_sub{
+		height:1200px !important;
+	}
+	.port_text1{
+		padding:30px 0px;
+	}
+	.port_text2{
+		padding:0 30px;
+		margin-bottom:20px;
+	}
+	.port_text3{
+		padding-right:20px;
+	}
+}
+@media all and (min-width: 1024px){
+}
+

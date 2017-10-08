@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+a,a:link,a:visited,a:hover,a:active{
+	color:inherit;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+	font-family:inherit;
+}
+.a_box{
+	display:block !important;
+}
+
+html,body{
+	width:1903px;
+	height:100%;
+}
+*{
+	margin:0;
+}
+ul,li{
+	padding:0;
+	list-style:none;
+}
+li{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	width:100%;
+	display:block;
+	color:#000;
+	font-family:"돋움";
+	border-bottom:1px solid #e7e8eb;
+	box-sizing:border-box;
+	background:#FFF;
+	text-indent:70px;
+	font-size:12px;
+}
+li:nth-child(1){
+	background:#e7e8eb;
+	text-indent:40px;
+}
+.wrap{
+	width:100%;
+	height:100%;
+}
+.header{
+	width:100%;
+	height:70px;
+	position:relative;
+	background:#e54506;
+}
+.headerText{
+	color:#FFF;
+	height:100%;
+	font-size:24px;
+	line-height:70px;
+	text-indent:50px;
+	float:left;
+	padding-right:50px;		
+}
+.home{
+	width:70px;
+	height:70px;
+	float:left;
+	background:url(home.png) center center no-repeat;
+	background-size:contain;
+}
+.container{
+	width:100%;
+	min-height:100%;
+	overflow:hidden;
+	background:#e7e8eb;
+}
+.nav{
+	width:280px;
+	float:left;
+	height:100%;
+	background:#fff;
+	border-right:solid 1px #e7e8eb;
+	box-sizing:border-box;
+}
+.id{
+	width:100%;
+	position:relative;
+	height:100px;
+	background:url(id_icon.png) left center no-repeat;
+	background-position:20px 5px;
+}
+.id_descripsion{
+	position:absolute;
+	width:450px;
+	height:50px;
+	line-height:50px;
+	background:url(line.png) no-repeat;
+	left:180px;
+	top:20px;
+	font-size:12px;
+	color:#ff6022;
+	text-indent:30px;
+	opacity:0;
+	transition: all 1s;
+}
+.id_hover{
+	left:250px !important;
+	opacity:1;
+}
+.id_text1,.id_text2{
+	font-size:14px;
+	width:200px;
+	float:right;
+	text-align:center;
+}
+.id_text1{
+	margin-top:30px;
+}
+.section{
+	width:1523px;
+	min-height:100%;
+	border-left:20px solid #e7e8eb;
+	border-top:20px solid #e7e8eb;
+	padding:30px;
+	height:100%;
+	background:#FFF;
+	float:left;
+}
+.title{
+	font-family: 'Hanna', serif;
+	font-size:20px;
+	margin-bottom:50px;
+}
+
+table{
+	margin-top:75px;
+	margin-left:35px;
+	font-family:"돋움";
+	font-size:12px;
+	text-align: center;
+}
+tr{
+	opacity:0
+}
+.hd{
+	font-size:17px;
+	font-family: 'Hanna', serif;
+}
+td{
+	padding:5px 10px;
+	border:1px solid #333;
+}

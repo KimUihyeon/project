@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	#section1-container{
+		height:355px !important;
+		overflow:hidden;
+	}
+	.login_text1,.login_text2{
+		text-align:center;
+		color:#000;
+	}
+	.login_text1{
+		margin-top:120px;
+		font-size:52px;
+		font-family: 'Hanna', serif;
+	}
+	.login_text2{
+		margin-top:20px;
+		font-family: 'Hanna', serif;
+		font-size:18px;;
+	}
+	.section-Box{
+	}
+}
+@media all and (min-width: 835px){	
+	.btn1{
+		margin-left:40%;
+	}
+}
+@media all and (min-width: 1024px){
+}
+
